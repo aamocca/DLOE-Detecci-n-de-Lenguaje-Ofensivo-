@@ -1,0 +1,45 @@
+{%extends 'layout.html'%}
+
+{% block content %}
+
+<h1 class="text-center">¿ C u a l &nbsp; e s &nbsp; t u &nbsp; p r o b l e m a ?</h1>
+
+<article class="centrar">
+
+    <section class= "mitad">
+      <input type="checkbox">Lorem ipsum dolor sit amet</input><br>
+      <input type="checkbox">Lorem ipsum dolor sit amet</input><br>
+      <input type="checkbox">Lorem ipsum dolor sit amet</input><br>
+      <input type="checkbox">Lorem ipsum dolor sit amet</input><br>
+    </section>
+    <section class="otramitad">
+     <input type="checkbox">Lorem ipsum dolor sit amet</input><br>
+     <input type="checkbox">Lorem ipsum dolor sit amet</input><br>
+     <input type="checkbox">Lorem ipsum dolor sit amet</input><br>
+     <input type="checkbox">Lorem ipsum dolor sit amet</input><br>
+    </section>
+
+    <button type="button" class="button" data-toggle="modal" data-target="#miModal">E N V I A R</button>
+
+</article>
+
+<div class="modal fade" id="miModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel"></h4>
+			</div>
+        <div class="modal-body">
+         <h3 class="text-center">R E A L I Z A D O</h3>
+         <h3>Tu reporte ha sido enviado con exito a los desarrolladores.
+          Se le estara dando seguimiento a tu reporte</h3> 
+        </div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}

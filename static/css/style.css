@@ -1,0 +1,171 @@
+body{
+    background: #364D55;
+    color: white;
+}
+
+p.Titulo{
+    font: condensed 120% sans-serif;
+}
+ 
+p{
+    font-family: 'Open Sans', sans-serif;
+}
+h1{
+    font-family: 'Open Sans', sans-serif;
+    padding-top: 85px;
+    margin:5px;
+}
+
+.navbar{
+    padding-right: 20px;
+    font-family: 'Open Sans', sans-serif;
+    color:white;
+    background: #485E6F;
+    text-decoration: none !important;
+    margin:5px;
+    
+    
+}
+.navbar:hover{
+    color:white;
+}
+
+.entrada{
+    padding: 30px;
+    margin:50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100% ; 
+    height: 400% !important; 
+    background: #B9D2DC;
+}
+
+.button{
+    margin-left: auto;
+    margin-right: auto ;
+    display: block;
+    background: #637B83;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    text-decoration: none !important;
+    padding:10px;
+}
+
+.button:hover{
+    color:white;
+}
+
+label{
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    display: block;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 10px;
+    width: 50%;
+    height: 30%;
+}
+
+.centrar{
+    display: block;
+    margin: 1px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 80%;
+    height: 60%;
+    
+}
+
+.mitad{
+    padding: 40px;
+    display: inline-block;
+    width: 40%;
+    margin-right: auto;
+    font-family: 'Open Sans', sans-serif;
+    
+}
+.otramitad{
+    padding: 40px;
+    display: inline-block;
+    width: 40%;
+    margin-left: auto;
+    font-family: 'Open Sans', sans-serif;
+}
+
+input{
+    margin: 30px !important;
+}
+
+.carousel{
+margin: 100px;
+}
+
+.card-body{
+width: 70%;
+display: block;
+margin-left: auto !important;
+margin-right: auto !important;
+height: 60%;
+background: #B9D2DC;
+font-family: 'Open Sans', sans-serif;
+}
+
+.modal-content{
+    color:black;
+    background-color: #B9D2DC !important;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.centrarmodal{
+    
+}
+
+.modalmitad{
+    padding: 40px;
+    display: inline-block;
+    width: 58%;
+    margin-right: auto;
+    font-family: 'Open Sans', sans-serif;
+    background: #B9D2DC;
+    
+}
+.modalotra{
+    padding: 40px;
+    display: inline-block;
+    width: 38%;
+    margin-left: auto;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.centrarcuadro{
+    display: block;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 100%;
+}
+
+.cuadroizquierdo{
+    padding: 40px;
+    display: inline-block;
+    width: 48%;
+    margin-right: auto;
+    font-family: 'Open Sans', sans-serif;
+    
+}
+
+.cuadroderecho{
+    padding: 40px;
+    display: inline-block;
+    width: 48%;
+    margin-left: auto;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.textocuadro{
+    background: #B9D2DC;
+    color: black;
+    width: 100%;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding:15px;
+}
