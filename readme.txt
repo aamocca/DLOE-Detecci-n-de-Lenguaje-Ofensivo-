@@ -1,0 +1,1 @@
+Todo el contenido del rar tiene que estar en la misma carpeta
