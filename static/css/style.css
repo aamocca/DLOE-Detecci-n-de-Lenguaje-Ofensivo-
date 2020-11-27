@@ -206,3 +206,28 @@ table{
     margin-top: 15px;
     
 }
+
+.cardio{
+    border-color: black;
+    color:black;
+    font-family: 'Open Sans', sans-serif;
+    margin:40px;
+    padding:10px;
+}
+
+.card-text{
+    font-family: 'Open Sans', sans-serif;
+    padding:10px;
+    color:white;
+}
+
+.card-title{
+    font-family: 'Open Sans', sans-serif;
+    padding:10px !important;
+    color:white;
+}
+.kien{
+    width: 150px;
+    height: 150px;
+
+}

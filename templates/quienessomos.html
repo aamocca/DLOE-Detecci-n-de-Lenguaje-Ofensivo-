@@ -1,37 +1,80 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-        <div class="carousel-item active"> 
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                    <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas a earum ab provident ipsum, quisquam nihil cum inventore eaque nulla maiores accusantium vero officia exercitationem qui alias ullam unde aut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum consequuntur laborum exercitationem earum doloribus dignissimos sed reprehenderit laboriosam officiis. At vero consequuntur incidunt provident saepe error explicabo, odio quasi perspiciatis? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia corporis nisi quibusdam alias laboriosam debitis ducimus accusamus non nobis, in blanditiis repudiandae, excepturi magni libero sed exercitationem! Officia, reprehenderit laboriosam?</p>
-                </div>
-        </div>
-        <div class="carousel-item">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas a earum ab provident ipsum, quisquam nihil cum inventore eaque nulla maiores accusantium vero officia exercitationem qui alias ullam unde aut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum consequuntur laborum exercitationem earum doloribus dignissimos sed reprehenderit laboriosam officiis. At vero consequuntur incidunt provident saepe error explicabo, odio quasi perspiciatis? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia corporis nisi quibusdam alias laboriosam debitis ducimus accusamus non nobis, in blanditiis repudiandae, excepturi magni libero sed exercitationem! Officia, reprehenderit laboriosam?</p>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas a earum ab provident ipsum, quisquam nihil cum inventore eaque nulla maiores accusantium vero officia exercitationem qui alias ullam unde aut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum consequuntur laborum exercitationem earum doloribus dignissimos sed reprehenderit laboriosam officiis. At vero consequuntur incidunt provident saepe error explicabo, odio quasi perspiciatis? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia corporis nisi quibusdam alias laboriosam debitis ducimus accusamus non nobis, in blanditiis repudiandae, excepturi magni libero sed exercitationem! Officia, reprehenderit laboriosam?</p>
-            </div>
-        </div>
+
+<table>
+    <tr>
+  <th>
+<div class="cardio mb-3" style="max-width: 540px;">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <img class="kien" src="{{url_for('static', filename='/images/aaron.jpg')}}" class="card-img" alt="...">
+      </div>
+      <div class="col-md-8">
+        
+          <h5 class="card-title">Manuel Aarón Hernández</h5>
+          <p class="card-text">Desarrollador de Frontend, especializado en Angular y React, actualmente estudiando ITS en FIME perteneciente a la UANL.
+          </p>
+         
+        
+      </div>
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
-</div>
+</th>
+
+<th>
+    <div class="cardio mb-3" style="max-width: 540px;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img class="kien" src="{{url_for('static', filename='/images/liliana.jpg')}}" class="card-img" alt="...">
+          </div>
+          <div class="col-md-8">
+            
+              <h5 class="card-title">Liliana Sarahi Hernández</h5>
+              <p class="card-text">Desarrollador de Backend especializada en Spring, actualmente cursando el 7mo semestre de Ingenieria de Software en FIME perteneciente a la UANL. </p>
+           
+            
+          </div>
+        </div>
+        </div>
+    </th>     
+</tr>   
+
+<tr>
+    <th>
+  <div class="cardio mb-3" style="max-width: 540px;">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <img class="kien" src="https://fakeimg.pl/300/" class="card-img" alt="...">
+        </div>
+        <div class="col-md-8">
+          
+            <h5 class="card-title">Sonia Alejandra Treviño</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+           
+          
+        </div>
+      </div>
+  </th>
+  
+  <th>
+      <div class="cardio mb-3" style="max-width: 540px;">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <img class="kien" src="https://fakeimg.pl/300/" class="card-img" alt="...">
+            </div>
+            <div class="col-md-8">
+              
+                <h5 class="card-title">Edson Cepeda</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            
+              
+            </div>
+          </div>
+          </div>
+      </th>     
+  </tr>   
+
+
+</table>
+
 {% endblock %}
