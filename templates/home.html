@@ -5,20 +5,23 @@
 <h1 class="text-center">I n t r o d u c e &nbsp; t e x t o &nbsp; a &nbsp; a n a l i z a r.</h1>
 
 
+<div action="/redpues" method="post">
+  <article class="centrarcuadro">
 
-<article class="centrarcuadro">
+    <section class="cuadroizquierdo">
+      <textarea for="espmexa" name="espmexa" rows="10px" class="textocuadro"></textarea>
+      <button type="button" class="button"><a href="{{url_for('resultado')}}">E S P A Ñ O L &nbsp; M E X I C A N
+          O</a></button>
+    </section>
 
-<section class="cuadroizquierdo"> 
-  <textarea rows="10px" class="textocuadro"></textarea>
-  <button type="button" class="button"><a href="{{url_for('resultado')}}">E S P A Ñ O L &nbsp; M E X I C A N O</a></button>
-</section>
+    <section class="cuadroderecho">
+      <textarea for="espcas" name="espcas"  rows="10px" class="textocuadro"></textarea>
+      <button type="button" class="button"><a href="{{url_for('resultado')}}">E S P A Ñ O L &nbsp; C A S T E L L A N
+          O</a></button>
+    </section>
+  </article>
 
-<section class="cuadroderecho">
-  <textarea rows="10px" class="textocuadro"></textarea>
-  <button type="button" class="button"><a href="{{url_for('resultado')}}">E S P A Ñ O L &nbsp; C A S T E L L A N O</a></button>
-</section>
-</article>
-
+</div>
 
 
 {% endblock %}
