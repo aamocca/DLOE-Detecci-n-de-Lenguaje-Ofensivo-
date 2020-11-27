@@ -1,0 +1,154 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div>
+    <div class="container">
+        <div class="row">
+            <div class="col-1">
+
+            </div>
+
+
+
+            <div class="col-10">
+                <div class="background">
+                    <h3> Limpieza y preprocesamiento de datos de texto</h3>
+                    <p>Con OffensEval, la primera tarea del conjunto de datos es preparar y limpiar los datos para su
+                        uso posterior. <br>
+
+                        Importar el conjunto de datos y eliminar columnas innecesarias.<br>
+
+                        Las etiquetas de las subtareas byc no son necesarias para detectar lenguaje ofensivo. <br></p>
+                    <iframe
+                        src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=panda-syntax&wt=none&l=auto&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=import%2520pandas%2520as%2520pd%250Aimport%2520pickle%250A%250Atweets_data%2520%253D%2520pd.read_csv%28%27..%252FDataset%252Folid-training-v1.0.tsv%27%252C%2520delimiter%253D%27%255Ct%27%29%250Aprint%28tweets_data%29%250Atweets_data%2520%253D%2520tweets_data.iloc%255B%253A%252C1%253A3%255D%250Atest_set%2520%253D%2520pd.read_csv%28%27..%252FDataset%252Ftestset-levela.tsv%27%252C%2520delimiter%253D%27%255Ct%27%29%250Atweets_data"
+                        style="width: 807px; height: 330px; border:0; transform: scale(1); overflow:hidden;"
+                        sandbox="allow-scripts allow-same-origin">
+                    </iframe>
+                    <p> id tweet subtask_a \ <br>
+                        0 86426 @USER She should ask a few native Americans wh... OFF <br>
+                        1 90194 @USER @USER Go home you’re drunk!!! @USER #MAG... OFF <br>
+                        2 16820 Amazon is investigating Chinese employees who ... NOT <br>
+                        3 62688 @USER Someone should'veTaken" this piece of sh... OFF <br>
+                        4 43605 @USER @USER Obama wanted liberals &amp; illega... NOT <br>
+                        ... ... ... ... <br>
+                        13235 95338 @USER Sometimes I get strong vibes from people... OFF <br>
+                        13236 67210 Benidorm ✅ Creamfields ✅ Maga ✅ Not too sh... NOT <br>
+                        13237 82921 @USER And why report this garbage. We don't g... OFF <br>
+                        13238 27429 @USER Pussy OFF <br>
+                        13239 46552 #Spanishrevenge vs. #justice #HumanRights and ... NOT <br> </p>
+
+                    <p> subtask_b subtask_c <br>
+                        0 UNT NaN <br>
+                        1 TIN IND <br>
+                        2 NaN NaN <br>
+                        3 UNT NaN <br>
+                        4 NaN NaN <br>
+                        ... ... ... <br>
+                        13235 TIN IND <br>
+                        13236 NaN NaN <br>
+                        13237 TIN OTH <br>
+                        13238 UNT NaN <br>
+                        13239 NaN NaN <br>
+                    </p>
+
+                    <table class="egt">
+
+                        <tr>
+
+                            <th></th>
+
+                            <th>Tweet</th>
+
+                            <th>subtask_a</th>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>0</td>
+                            <td>@USER She should ask a few native Americans wh...</td>
+                            <td>OFF</td>
+                        </tr>
+                        <tr>
+
+                            <td>1</td>
+                            <td>@USER @USER Go home you’re drunk!!! @USER #MAG...</td>
+                            <td>OFF</td>
+                        </tr>
+                        <tr>
+
+                            <td>2</td>
+                            <td>Amazon is investigating Chinese employees who ...</td>
+                            <td>NOT</td>
+                        </tr>
+                        <tr>
+
+                            <td>3</td>
+                            <td>@USER Someone should'veTaken" this piece of sh...</td>
+                            <td>OFF</td>
+
+                        </tr>
+                        <tr>
+
+                            <td>4</td>
+                            <td>@USER @USER Obama wanted liberals &amp; illega...</td>
+                            <td>NOT</td>
+
+                        </tr>
+                        <tr>
+
+                            <td>....</td>
+                            <td>........</td>
+                            <td>....</td>
+
+                        </tr>
+                        <tr>
+
+                            <td>13235</td>
+                            <td>@USER Sometimes I get strong vibes from people...</td>
+                            <td>OFF</td>
+
+                        </tr>
+                        <tr>
+
+                            <td>13236</td>
+                            <td>Benidorm ✅ Creamfields ✅ Maga ✅ Not too sh...</td>
+                            <td>NOT</td>
+
+                        </tr>
+                        <tr>
+
+                            <td>13237</td>
+                            <td>@USER And why report this garbage. We don't g...</td>
+                            <td>OFF</td>
+
+                        </tr>
+                        <tr>
+
+                            <td>13238</td>
+                            <td>@USER Pussy</td>
+                            <td>OFF</td>
+
+                        </tr>
+
+                    </table>
+                    <iframe
+  src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=panda-syntax&wt=none&l=auto&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%250Atweets_data.sample%285%29"
+  style="width: 327px; height: 222px; border:0; transform: scale(1); overflow:hidden;"
+  sandbox="allow-scripts allow-same-origin">
+</iframe>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="col-1">
+
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

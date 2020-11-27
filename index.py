@@ -26,6 +26,17 @@ def objetivo():
 def notas():
  return render_template('notas.html')
 
+@app.route('/nota1')
+def nota1():
+  return render_template('nota1.html') 
+
+@app.route('/nota2')
+def nota2():
+  return render_template('nota2.html')  
+
+@app.route('/nota3')
+def nota3():
+  return render_template('nota3.html') 
 
 
 if __name__ == '__main__':
