@@ -188,8 +188,21 @@ li{
 .background{
     background: #B9D2DC;
     margin-top: 10%;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 20px 20px 20px 20px;
+    padding:20px
+
 }
 
 table{
     border: 5px;
+}
+
+.icono{
+    width: 50px;
+    height: 50px;
+    float: right;
+    text-align: right !important;
+    margin-top: 15px;
+    
 }
