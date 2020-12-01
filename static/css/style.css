@@ -44,7 +44,7 @@ h1{
     margin-left: auto;
     margin-right: auto ;
     display: block;
-    background: #637B83;
+    background: #637B83 !important;
     font-family: 'Open Sans', sans-serif;
     color: white;
     text-decoration: none !important;
@@ -245,4 +245,26 @@ table{
     font-size: 20px;
     color:black;
     font-family: 'Open Sans', sans-serif;
+}
+
+.inputText{
+    width: 300px; 
+    height: 100px;
+    color:black !important;
+    background: #B9D2DC !important;
+}
+.labelResultado{
+    font-size: 100px !important;
+    font-family: 'Open Sans', sans-serif;
+    margin-left: auto;
+    margin-right: auto ;
+    display: block;
+    width:70%;
+    height: 40%;
+}
+.result{
+    font-family: 'Open Sans', sans-serif;
+    color:white;
+    font-size: 20px;
+
 }

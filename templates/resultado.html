@@ -4,9 +4,11 @@
  
 <h1 class="text-center">R e s u l t a d o s</h1>
 
-<label>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus recusandae ea ex quam? Sint officiis, dolores tenetur quaerat sapiente vero! Quisquam quasi dolor exercitationem numquam quod iure ipsa. Recusandae, vitae?
-    Lorem ipsum dolor sit amet, sapien etiam, nunc amet dolor ac odio mauris justo. Luctus arcu, urna praesent at id quisque ac. Arcu es massa vestibulum malesuada, integer vivamus elit eu mauris eus, cum eros quis aliquam wisi. Nulla wisi laoreet suspendisse integer vivamus elit eu mauris hendrerit facilisi, mi mattis pariatur aliquam pharetra eget.
-    Lorem ipsum dolor sit amet, sapien etiam, nunc amet dolor ac odio mauris justo. Luctus arcu, urna praesent at id quisque ac. Arcu es massa vestibulum malesuada, integer vivamus elit eu mauris eus, cum eros quis aliquam wisi. Nulla wisi laoreet suspendisse integer vivamus elit eu mauris hendrerit facilisi, mi mattis pariatur aliquam pharetra eget.
+<label class=labelResultado>
+    <p class=result>Los resultados del análisis de la red neuronal se expresan con un número del 0 al 1.<br> Si el número es cercano a 1 el texto escrito es ofensivo, si es cercano a 0 el texto escrito inofensivo.<br><br>
+        El resultado de  '{{user}} ' es: '{{resultado}}'<br><br>
+        El criterio de evaluación comprende, si clasifica directamente ofensivo si es mayor o igual a 0.5 y se considera directamente inofensivo si es menos a 0.5. <br>
+        Por lo tanto '{{user}}' es ofensivo</p>
 </label>
 
 <button type="button" class="button"><a href="{{url_for('reportar')}}">R E P O R T A R</a></button>

@@ -1,4 +1,4 @@
-new_text = 'Vete a la mierda'
+new_text = 'ola'
 def write_to_csv(new_text):
     import csv
     with open('test.csv', "w") as test_file:
