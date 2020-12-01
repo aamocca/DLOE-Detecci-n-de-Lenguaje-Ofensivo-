@@ -59,19 +59,21 @@ def network_analysis(language): #mexican or spanish
 @app.route('/', methods=["POST", "GET"])
 def home():
   if request.method == "POST":
-    user = request.form ["mexican"]
+    lang = request.form.get('lang') 
+    text = request.form[lang]
+    print(lang)
     write_to_csv(user)
-    return redirect (url_for("user",usr = user))
+    return redirect (url_for("user",text = text, lang=lang))
     
   else:
     return render_template("home.html")
   
  
 
-@app.route("/<usr>")
-def user(usr):
-  resultado= network_analysis("mexican")
-  return render_template('resultado.html',resultado=resultado, user=usr)
+@app.route("/<text>-<lang>")
+def user(text,lang):
+  resultado= network_analysis(lang)
+  return render_template('resultado.html',resultado=resultado, user=text)
 
 @app.route("/<usr1>")
 def user1(usr1):
