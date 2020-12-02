@@ -75,10 +75,7 @@ def user(text,lang):
   resultado= network_analysis(lang)
   return render_template('resultado.html',resultado=resultado, user=text)
 
-@app.route("/<usr1>")
-def user1(usr1):
-  resultado= network_analysis("spanish")
-  return render_template('resultado.html',resultado=resultado, user=usr1)  
+
 
    
 
