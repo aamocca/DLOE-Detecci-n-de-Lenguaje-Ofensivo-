@@ -268,3 +268,18 @@ table{
     font-size: 20px;
 
 }
+.tablaNotas{
+    width: 75%;
+    font-family: 'Open Sans', sans-serif;
+    color:gray;
+    text-align: left;
+    vertical-align: center;
+    padding:20px !important;
+    border-collapse: collapse !important;
+    border: black 2px solid;
+}
+iframe{
+    display: block;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
