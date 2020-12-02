@@ -63,7 +63,6 @@ termcolor==1.1.0
 urllib3==1.26.2
 virtualenv==20.2.1
 Werkzeug==1.0.1
-win32core==221.36
-win32gui==221.6
+
 wrapt==1.12.1
 zipp==3.4.0
