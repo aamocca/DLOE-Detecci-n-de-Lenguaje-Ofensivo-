@@ -16,16 +16,16 @@
                         href="https://github.com/OrbitalCardinal/OffensiveLanguageDetection/blob/OLD_Spanish/spanish_src/network_training.ipynb">
                         <img class="icono" src="https://www.flaticon.es/svg/static/icons/svg/2111/2111432.svg" alt="">
                     </a>
-                    <h3> Entrenamiento </h3>
+                    <h3 class=notas> Entrenamiento </h3>
                     <br> <br>
                     <iframe
                         src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=panda-syntax&wt=none&l=python&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=131%25&si=false&es=2x&wm=false&code=import%2520pandas%2520as%2520pd%250A%250Atrain%2520%253D%2520pd.read_csv%28%27tweets_data_clean.csv%27%252Cencoding%253D%2522utf-8%2522%29%250Atrain.text%2520%253D%2520train.text.astype%28str%29%250Atrain%2520%253D%2520%2520train.iloc%255B%253A%252C1%253A3%255D%2520%2523%2520Removiendo%2520columna%2520de%2520id%250Atrain.head%28%29"
                         style="width: 585px; height: 347px; border:0; transform: scale(1); overflow:hidden;"
                         sandbox="allow-scripts allow-same-origin">
                     </iframe>
-                    <table class="egt" class=tablaNotas>
+                    <table  class=tablaNotas>
 
-                        <tr>
+                        <tr >
 
                             <th></th>
 
@@ -81,7 +81,7 @@
                         style="width: 585px; height: 275px; border:0; transform: scale(1); overflow:hidden;"
                         sandbox="allow-scripts allow-same-origin">
                     </iframe>
-                    <h3>Entrenamiento de la red neuronal</h3>
+                    <h3 class=notas>Entrenamiento de la red neuronal</h3>
                     <iframe
                         src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=panda-syntax&wt=none&l=python&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=131%25&si=false&es=2x&wm=false&code=from%2520keras.preprocessing.text%2520import%2520Tokenizer%250Afrom%2520keras.preprocessing.sequence%2520import%2520pad_sequences%250Afrom%2520keras.layers%2520import%2520Embedding%252C%2520Dense%252C%2520GlobalMaxPool1D%252C%2520Dropout%252C%2520Flatten%252C%2520Bidirectional%252C%2520LSTM%250Afrom%2520keras.models%2520import%2520Sequential%250Amax_len%253D200%250Atokenizer%253DTokenizer%282000%29%250Atokenizer.fit_on_texts%28train.text%29%250Atrain_sequences%253Dtokenizer.texts_to_sequences%28train.text%29%250Atest_sequences%253Dtokenizer.texts_to_sequences%28test%29%250Apadded_train%2520%253D%2520pad_sequences%28train_sequences%252C%2520maxlen%253Dmax_len%29%250Apadded_test%2520%253D%2520pad_sequences%28test_sequences%252C%2520maxlen%253Dmax_len%29%250Ay%2520%253D%2520train.AG.values%250Atrain_sequences%255B%253A1%255D%250Abatch_size%2520%253D%252032%250Aepoch%2520%253D%25204%250Amodel%253DSequential%28%255BEmbedding%28num_words%252C32%252Cinput_length%253Dmax_len%29%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520Bidirectional%28LSTM%2864%252Creturn_sequences%253DTrue%29%29%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520GlobalMaxPool1D%28%29%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520Dense%2860%252Cactivation%253D%27relu%27%29%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520Dense%281%252Cactivation%253D%27sigmoid%27%29%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%255D%29%250A%250Amodel.compile%28optimizer%253D%27adam%27%252Closs%253D%27binary_crossentropy%27%252Cmetrics%253D%27accuracy%27%29%250Ahistory%2520%253D%2520model.fit%28padded_train%252Cy%252Cbatch_size%252Cepochs%253Depoch%252C%2520validation_split%253D.25%252C%2520steps_per_epoch%253D100%29%250Aimport%2520matplotlib.pyplot%2520as%2520plt%250Aplt.plot%28history.history%255B%27accuracy%27%255D%252C%2520label%253D%2522Precisi%25C3%25B3n%2522%29%250Aplt.plot%28history.history%255B%27loss%27%255D%252C%2520label%253D%2522Perdida%2522%29%250A"
                         style="width: 799px; height: 725px; border:0; transform: scale(1); overflow:hidden;"

@@ -16,23 +16,22 @@
                         href="https://github.com/OrbitalCardinal/OffensiveLanguageDetection/blob/OLD_Spanish/spanish_src/dataCleaning.ipynb">
                         <img class="icono" src="https://www.flaticon.es/svg/static/icons/svg/2111/2111432.svg" alt="">
                     </a>
-                    <h3>Limpieza de datos y preprocesamiento</h3>
+                    <h3 class=notas>Limpieza de datos y preprocesamiento</h3>
                     <br> <br>
-                    <p>Usando el conjunto de datos expedido por HatEval, se realiza una limpieza de datos para su uso
+                    <p class=notas>Usando el conjunto de datos expedido por HatEval, se realiza una limpieza de datos para su uso
                         posterior en los algoritmos de aprendizaje automatico.<br>
 
                         Se importan el conjunto de datos y se remueven las columnas de clasificación inecesarias.<br>
 
                         Se utiliza solo la columna del texto y la columna de clasificación "AG" que se refiere a
                         "Agresivo".</p>
-
-                    <iframe
-                        src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=panda-syntax&wt=none&l=python&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=131%25&si=false&es=2x&wm=false&code=import%2520pandas%2520as%2520pd%250Aimport%2520pickle%250A%250A%2523Precargando%2520el%2520conjunto%2520de%2520entrenamiento%250Atweets_data%2520%253D%2520%2520pd.read_csv%28%27..%252FSpanishDataSets%252Ftrain_es.tsv%27%252C%2520delimiter%253D%27%255Ct%27%252Cencoding%253D%2522utf-8%2522%29%250A%2523HS%2520puede%2520ser%2520considerado%2520en%2520el%2520futuro%250Atweets_data%2520%253D%2520tweets_data%255B%255B%27text%27%252C%27AG%27%255D%255D%2520%250A%250A%2523Precargando%2520el%2520conjunto%2520de%2520prueba%250Atest_data%2520%253D%2520pd.read_csv%28%27..%252FSpanishDataSets%252Ftest_es.tsv%27%252C%2520delimiter%253D%27%255Ct%27%252Cencoding%253D%2522utf-8%2522%29%250Atest_data%2520%253D%2520test_data%255B%255B%27text%27%255D%255D%250A%250A%2523Visualizando%2520el%2520resultado%2520%250Atweets_data.sample%285%29"
-                        style="width: 942px; height: 437px; border:0; transform: scale(1); overflow:hidden;"
+                        <iframe
+                        src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=panda-syntax&wt=none&l=auto&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=import%2520pandas%2520as%2520pd%250Aimport%2520pickle%250A%250A%2523Precargando%2520el%2520conjunto%2520de%2520entrenamiento%250Atweets_data%2520%253D%2520%2520pd.read_csv%28%27..%252FSpanishDataSets%252Ftrain_es.tsv%27%252C%2520%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520delimiter%253D%27%255Ct%27%252Cencoding%253D%2522utf-8%2522%29%250A%2523HS%2520puede%2520ser%2520considerado%2520en%2520el%2520futuro%250Atweets_data%2520%253D%2520tweets_data%255B%255B%27text%27%252C%27AG%27%255D%255D%2520%250A%250A%2523Precargando%2520el%2520conjunto%2520de%2520prueba%250Atest_data%2520%253D%2520pd.read_csv%28%27..%252FSpanishDataSets%252Ftest_es.tsv%27%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520delimiter%253D%27%255Ct%27%252Cencoding%253D%2522utf-8%2522%29%250Atest_data%2520%253D%2520test_data%255B%255B%27text%27%255D%255D%250A%250A%2523Visualizando%2520el%2520resultado%2520%250Atweets_data.sample%285%29"
+                        style="width: 673px; height: 474px; border:0; transform: scale(1); overflow:hidden;"
                         sandbox="allow-scripts allow-same-origin">
-                    </iframe>
+                      </iframe>
 
-                    <table class="egt" class=tablaNotas>
+                    <table class=tablaNotas>
 
                         <tr>
 
@@ -78,27 +77,27 @@
                         </tr>
 
                     </table>
-                    <p>El texto contenido en el conjunto de datos contiene caracteres inecesarios, signos de puntuación
+                    <p class=notas>El texto contenido en el conjunto de datos contiene caracteres inecesarios, signos de puntuación
                         y demás basura que se remueve a continuación.</p>
                     <iframe
                         src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=panda-syntax&wt=none&l=python&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=131%25&si=false&es=2x&wm=false&code=import%2520re%2520%250Aimport%2520string%250A%250A%2523Codigo%2520unicode%2520para%2520emojis%252C%2520puede%2520ser%2520utilizado%2520con%2520regex%250AEMOJI_PATTERN%2520%253D%2520re.compile%28%250A%2520%2520%2520%2520%2522%255B%2522%250A%2520%2520%2520%2520%2522%255CU0001F1E0-%255CU0001F1FF%2522%2520%2520%2523%2520flags%2520%28iOS%29%250A%2520%2520%2520%2520%2522%255CU0001F300-%255CU0001F5FF%2522%2520%2520%2523%2520symbols%2520%2526%2520pictographs%250A%2520%2520%2520%2520%2522%255CU0001F600-%255CU0001F64F%2522%2520%2520%2523%2520emoticons%250A%2520%2520%2520%2520%2522%255CU0001F680-%255CU0001F6FF%2522%2520%2520%2523%2520transport%2520%2526%2520map%2520symbols%250A%2520%2520%2520%2520%2522%255CU0001F700-%255CU0001F77F%2522%2520%2520%2523%2520alchemical%2520symbols%250A%2520%2520%2520%2520%2522%255CU0001F780-%255CU0001F7FF%2522%2520%2520%2523%2520Geometric%2520Shapes%2520Extended%250A%2520%2520%2520%2520%2522%255CU0001F800-%255CU0001F8FF%2522%2520%2520%2523%2520Supplemental%2520Arrows-C%250A%2520%2520%2520%2520%2522%255CU0001F900-%255CU0001F9FF%2522%2520%2520%2523%2520Supplemental%2520Symbols%2520and%2520Pictographs%250A%2520%2520%2520%2520%2522%255CU0001FA00-%255CU0001FA6F%2522%2520%2520%2523%2520Chess%2520Symbols%250A%2520%2520%2520%2520%2522%255CU0001FA70-%255CU0001FAFF%2522%2520%2520%2523%2520Symbols%2520and%2520Pictographs%2520Extended-A%250A%2520%2520%2520%2520%2522%255CU00002702-%255CU000027B0%2522%2520%2520%2523%2520Dingbats%250A%2520%2520%2520%2520%2522%255CU000024C2-%255CU0001F251%2522%2520%250A%2520%2520%2520%2520%2522%255D%252B%2522%250A%2520%2520%2520%2520%29%250A%250Adef%2520clean_text%28text%29%253A%250A%2520%2520%2520%2520%2523Remove%2520%2540USER%250A%2520%2520%2520%2520text%2520%253D%2520re.sub%28r%27%2540%255B%255E%255Cs%255D%252B%27%252C%27%27%252Ctext%29%250A%2520%2520%2520%2520%2523Remove%2520hastags%250A%2520%2520%2520%2520text%2520%253D%2520re.sub%28%27%2523%255Cw%252B%27%252C%27%27%252Ctext%29%250A%2520%2520%2520%2520%2523Remove%2520emoji%250A%2520%2520%2520%2520text%2520%253D%2520re.sub%28EMOJI_PATTERN%252C%27%27%252Ctext%29%250A%2520%2520%2520%2520%2523Remove%2520white%2520space%250A%2520%2520%2520%2520text%2520%253D%2520re.sub%28%27%255Cs%252B%27%252C%27%2520%27%252Ctext%29%250A%2520%2520%2520%2520%2523Beginning%2520of%2520the%2520text%2520white%2520space%250A%2520%2520%2520%2520text%2520%253D%2520re.sub%28%27%255E%255Cs%252B%27%252C%27%2520%27%252Ctext%29%250A%2520%2520%2520%2520%2523Remove%2520URL%250A%2520%2520%2520%2520text%2520%253D%2520re.sub%28%27URL%27%252C%27%27%252Ctext%29%250A%2520%2520%2520%2520%2523Remove%2520punctuation%2520marks%250A%2520%2520%2520%2520text%2520%253D%2520re.sub%28%27%255B.%252C%255C%252F%2523%21%25C2%25BF%2524%257C%2525%2522%25E2%2580%2594%255C%253F%2540%255C%255E%2526%255C*%255C%252B%253B%253A%257B%257D%253D%255C-_%2560%7E%28%29%255D%27%252C%27%27%252Ctext%29%250A%2520%2520%2520%2520%2523Remove%2520digits%250A%2520%2520%2520%2520text%2520%253D%2520re.sub%28%27%255Cd%27%252C%27%27%252Ctext%29%250A%2520%2520%2520%2520%2523Lowercase%250A%2520%2520%2520%2520text%2520%253D%2520text.lower%28%29%250A%2520%2520%2520%2520%250A%2520%2520%2520%2520return%2520text%250A%250A%2523Funcion%2520lambda%2520para%2520aplicar%2520en%2520los%2520conjuntos%2520de%2520datos%250Aclean%2520%253D%2520lambda%2520x%253A%2520clean_text%28x%29"
                         style="width: 585px; height: 1157px; border:0; transform: scale(1); overflow:hidden;"
                         sandbox="allow-scripts allow-same-origin">
                     </iframe>
-                    <p>Limpiando los textos para los conjuntos de entrenamiento y de pruebas</p>
+                    <p class=notas>Limpiando los textos para los conjuntos de entrenamiento y de pruebas</p>
                     <iframe
                         src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=panda-syntax&wt=none&l=python&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=131%25&si=false&es=2x&wm=false&code=tweets_data.text%2520%253D%2520tweets_data.text.apply%28clean%29%250Atest_data.text%2520%253D%2520test_data.text.apply%28clean%29"
                         style="width: 555px; height: 221px; border:0; transform: scale(1); overflow:hidden;"
                         sandbox="allow-scripts allow-same-origin">
                     </iframe>
-                    <p>Separando los textos que se clasifican como agresivos y no agresivos para su posterior analísis.
+                    <p class=notas>Separando los textos que se clasifican como agresivos y no agresivos para su posterior analísis.
                     </p>
                     <iframe
                         src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=panda-syntax&wt=none&l=python&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=131%25&si=false&es=2x&wm=false&code=non_agressive%2520%253D%2520tweets_data.loc%255Btweets_data%255B%27AG%27%255D%2520%253D%253D%25200%255D%250Anon_agressive.sample%285%29"
                         style="width: 585px; height: 239px; border:0; transform: scale(1); overflow:hidden;"
                         sandbox="allow-scripts allow-same-origin">
                     </iframe>
-                    <table class="egt" class=tablaNotas>
+                    <table class=tablaNotas>
 
                         <tr>
 
@@ -150,7 +149,7 @@
                         style="width: 580px; height: 221px; border:0; transform: scale(1); overflow:hidden;"
                         sandbox="allow-scripts allow-same-origin">
                     </iframe>
-                    <table class="egt" class=tablaNotas>
+                    <table class=tablaNotas>
 
                         <tr>
 
@@ -196,16 +195,16 @@
                         </tr>
 
                     </table>
-                    <h3>Corpus de texto</h3>
-                    <p>Se extrae el texto solamente para el corpus de texto.</p>
+                    <h3 class=notas>Corpus de texto</h3>
+                    <p class=notas>Se extrae el texto solamente para el corpus de texto.</p>
                     <iframe
                         src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=panda-syntax&wt=none&l=python&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=131%25&si=false&es=2x&wm=false&code=only_text%2520%253D%2520pd.DataFrame%28tweets_data.text%29%250Aonly_text"
                         style="width: 504px; height: 221px; border:0; transform: scale(1); overflow:hidden;"
                         sandbox="allow-scripts allow-same-origin">
                     </iframe>
-                    <table class="egt" class=tablaNotas>
+                    <table class=tablaNotas>
 
-                        <tr>
+                        <tr class=tablaNotas>
 
                             <th></th>
 
@@ -249,14 +248,14 @@
                         </tr>
 
                     </table>
-                    <p>También se extraen los corpus para los no agresivos y agresivos exclusivos.</p>
+                    <p class=notas>También se extraen los corpus para los no agresivos y agresivos exclusivos.</p>
 
                     <iframe
                         src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=panda-syntax&wt=none&l=python&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=131%25&si=false&es=2x&wm=false&code=only_text_non%2520%253D%2520pd.DataFrame%28non_agressive.text%29%250Aonly_text_non"
                         style="width: 555px; height: 221px; border:0; transform: scale(1); overflow:hidden;"
                         sandbox="allow-scripts allow-same-origin">
                     </iframe>
-                    <table class="egt" class=tablaNotas>
+                    <table class=tablaNotas>
 
                         <tr>
 
@@ -307,7 +306,7 @@
                         style="width: 571px; height: 239px; border:0; transform: scale(1); overflow:hidden;"
                         sandbox="allow-scripts allow-same-origin">
                     </iframe>
-                    <table class="egt" class=tablaNotas>
+                    <table class=tablaNotas>
 
                         <tr>
 
@@ -353,13 +352,13 @@
                         </tr>
 
                     </table>
-                    <p>Exportando los corpus de texto limpios de todos los tweets.</p>
+                    <p class=notas>Exportando los corpus de texto limpios de todos los tweets.</p>
                     <iframe
                         src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=panda-syntax&wt=none&l=python&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=131%25&si=false&es=2x&wm=false&code=tweets_data.to_csv%28%27tweets_data_clean.csv%27%29%250Atest_data.to_csv%28%27test_clean.csv%27%29%250Aonly_text.to_csv%28%27only_text.csv%27%29%250Aonly_text_non.to_csv%28%27only_text_non.csv%27%29%250Aonly_text_agressive.to_csv%28%27only_text_agressive.csv%27%29"
                         style="width: 597px; height: 275px; border:0; transform: scale(1); overflow:hidden;"
                         sandbox="allow-scripts allow-same-origin">
                     </iframe>
-                    <p>Guardando los data frames en formato pickle para su posterior utilización</p>
+                    <p class=notas>Guardando los data frames en formato pickle para su posterior utilización</p>
                     <iframe
                         src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=panda-syntax&wt=none&l=python&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=131%25&si=false&es=2x&wm=false&code=only_text.to_pickle%28%27corpus_only_text.pkl%27%29%250Aonly_text_non.to_pickle%28%27corpus_non.pkl%27%29%250Aonly_text_agressive.to_pickle%28%27corpus_agressive.pkl%27%29"
                         style="width: 597px; height: 239px; border:0; transform: scale(1); overflow:hidden;"

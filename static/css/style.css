@@ -282,4 +282,15 @@ iframe{
     display: block;
     margin-left: auto !important;
     margin-right: auto !important;
+    width: 40px;
+    height: 60px;
+}
+
+.notas{
+    color:black;
+    font-family: 'Open Sans', sans-serif;
+}
+.notasframe{
+    width: 40px;
+    height: 40px;
 }
