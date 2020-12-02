@@ -61,8 +61,7 @@ def home():
   if request.method == "POST":
     lang = request.form.get('lang') 
     text = request.form[lang]
-    print(lang)
-    write_to_csv(user)
+    write_to_csv(text)
     return redirect (url_for("user",text = text, lang=lang))
     
   else:
@@ -73,6 +72,7 @@ def home():
 @app.route("/<text>-<lang>")
 def user(text,lang):
   resultado= network_analysis(lang)
+  print(text)
   return render_template('resultado.html',resultado=resultado, user=text)
 
 
